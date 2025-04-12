@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://xyi2jyx157n4"]
+
+[ext_resource type="Texture2D" uid="uid://cvmc4nqjqdsu2" path="res://Assets/seperate_pngs/run-1.png" id="1_25iyt"]
+[ext_resource type="Texture2D" uid="uid://s0piau3sxgr1" path="res://Assets/seperate_pngs/run-2.png" id="2_6xnsx"]
+[ext_resource type="Texture2D" uid="uid://cj0dfmum5belm" path="res://Assets/seperate_pngs/run-3.png" id="3_qg1ol"]
+[ext_resource type="Texture2D" uid="uid://cpvw7h4yn5w6a" path="res://Assets/seperate_pngs/run-4.png" id="4_ccp1x"]
+[ext_resource type="Texture2D" uid="uid://c5wwyft8e5cdi" path="res://Assets/seperate_pngs/run-5.png" id="5_oygwi"]
+[ext_resource type="Texture2D" uid="uid://bi676gd28nj55" path="res://Assets/seperate_pngs/run-6.png" id="6_lai6h"]
+[ext_resource type="Texture2D" uid="uid://btwro5nfvv2y1" path="res://Assets/seperate_pngs/run-7.png" id="7_rtwwg"]
+[ext_resource type="Texture2D" uid="uid://brg2rlxjwon0v" path="res://Assets/seperate_pngs/run-8.png" id="8_svys3"]
+[ext_resource type="Script" uid="uid://c4nq0kmx6ds8r" path="res://Premade/AS2D-Seperate/run.gd" id="9_ac8iw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_085um"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_25iyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6xnsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qg1ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ccp1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oygwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lai6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rtwwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_svys3")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[node name="SeperateAS2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_085um")
+animation = &"run"
+frame_progress = 0.24319
+script = ExtResource("9_ac8iw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(6.05, 6.05)
